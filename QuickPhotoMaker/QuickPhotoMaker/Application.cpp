@@ -4,7 +4,7 @@
  * Constructor
  */
 Application::Application()
-    : controller(), viewMenu(controller), viewList(controller)
+    : controller(), viewMenu(controller), viewFiltrage(controller), viewDerivation(controller), viewOMM(controller), viewDetection(controller)
 {
 }
 

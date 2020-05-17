@@ -13,7 +13,7 @@ void ViewMenu::display()
 {
 	clear();
 	View::display();
-	std::cout << "1. Menu" << std::endl << "2. Menu" << std::endl << "..." << std::endl;
+	std::cout << "1. Filtrage" << std::endl << "2. Derivation" << std::endl << "3. Operations de morphologie mathematique" << std::endl << "4. Detection de contours" << std::endl << "5. Segmentation d'images" << std::endl;
 	int a;
 	std::cin.clear();
 	std::cin >> a;

@@ -25,8 +25,12 @@
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
     <ClCompile Include="view.cpp" />
-    <ClCompile Include="ViewList.cpp" />
+    <ClCompile Include="viewDerivation.cpp" />
+    <ClCompile Include="viewDetection.cpp" />
+    <ClCompile Include="ViewFiltrage.cpp" />
     <ClCompile Include="viewMenu.cpp" />
+    <ClCompile Include="viewOMM.cpp" />
+    <ClCompile Include="viewSegmentations.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
@@ -34,8 +38,12 @@
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
     <ClInclude Include="view.h" />
-    <ClInclude Include="viewList.h" />
+    <ClInclude Include="viewDerivation.h" />
+    <ClInclude Include="viewDetection.h" />
+    <ClInclude Include="viewFiltrage.h" />
     <ClInclude Include="viewMenu.h" />
+    <ClInclude Include="viewOMM.h" />
+    <ClInclude Include="viewSegmentations.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
