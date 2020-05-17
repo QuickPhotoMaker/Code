@@ -1,0 +1,27 @@
+﻿  controller.cpp
+  main.cpp
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(8,9): error C3646: 'vue': identificatore di override sconosciuto
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(8,9): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,46): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,42): error C2146: errore di sintassi: ')' mancante prima dell'identificatore 'vue'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,46): error C3646: 'vue': identificatore di override sconosciuto
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,46): error C2059: errore di sintassi: ')'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,25): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,25): error C2146: errore di sintassi: ')' mancante prima dell'identificatore 'vue'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,28): error C3646: 'vue': identificatore di override sconosciuto
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,28): error C2059: errore di sintassi: ')'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\main.cpp(17,35): error C2664: 'Controller::Controller(Controller &&)': impossibile convertire l'argomento 2 da 'Vue' a 'const int'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\main.cpp(17,31): message : Non è disponibile alcun operatore di conversione definito dall'utente oppure non è possibile chiamare l'operatore
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,2): message : vedere la dichiarazione di 'Controller::Controller'
+  Vue.cpp
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(8,9): error C3646: 'vue': identificatore di override sconosciuto
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(8,9): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,46): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,42): error C2146: errore di sintassi: ')' mancante prima dell'identificatore 'vue'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,46): error C3646: 'vue': identificatore di override sconosciuto
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(10,46): error C2059: errore di sintassi: ')'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,25): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,25): error C2146: errore di sintassi: ')' mancante prima dell'identificatore 'vue'
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,28): error C3646: 'vue': identificatore di override sconosciuto
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\controller.h(12,28): error C2059: errore di sintassi: ')'
+  Generazione del codice in corso...
