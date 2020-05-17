@@ -18,6 +18,25 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="controller.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="observer.cpp" />
+    <ClCompile Include="subject.cpp" />
+    <ClCompile Include="view.cpp" />
+    <ClCompile Include="ViewList.cpp" />
+    <ClCompile Include="viewMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="application.h" />
+    <ClInclude Include="controller.h" />
+    <ClInclude Include="observer.h" />
+    <ClInclude Include="subject.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="viewList.h" />
+    <ClInclude Include="viewMenu.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{88FF3A96-4B24-4F8B-8DA9-BC1A3D0030C2}</ProjectGuid>
@@ -137,9 +156,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Pierretesnul.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
