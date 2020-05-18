@@ -16,7 +16,7 @@ ViewSegmentations::ViewSegmentations(Controller& _controller)
  */
 void ViewSegmentations::notify()
 {
-	if (controller.getCurrentScreen() == 5)
+	if (controller.getCurrentScreen() == 8)
 		display();
 }
 

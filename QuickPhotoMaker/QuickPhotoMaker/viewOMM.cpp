@@ -16,7 +16,7 @@ ViewOMM::ViewOMM(Controller& _controller)
  */
 void ViewOMM::notify()
 {
-	if (controller.getCurrentScreen() == 3)
+	if (controller.getCurrentScreen() == 6)
 		display();
 }
 

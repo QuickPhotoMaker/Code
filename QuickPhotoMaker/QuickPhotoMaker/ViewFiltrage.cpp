@@ -16,7 +16,7 @@ ViewFiltrage::ViewFiltrage(Controller& _controller)
  */
 void ViewFiltrage::notify()
 {
-	if (controller.getCurrentScreen() == 1)
+	if (controller.getCurrentScreen() == 4)
 		display();
 }
 

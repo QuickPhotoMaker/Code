@@ -5,6 +5,10 @@
 #include "viewDerivation.h"
 #include "viewOMM.h"
 #include "viewDetection.h"
+#include "viewAdd.h"
+#include "viewDelete.h"
+#include "viewListe.h"
+#include "viewFiltres.h"
 class Application
 {
 private:
@@ -14,6 +18,10 @@ private:
 	ViewDerivation viewDerivation;
 	ViewOMM viewOMM;
 	ViewDetection viewDetection;
+	ViewAdd viewAdd;
+	ViewDelete viewDelete;
+	ViewListe viewListe;
+	ViewFiltres viewFiltres;
 
 public:
 	/**

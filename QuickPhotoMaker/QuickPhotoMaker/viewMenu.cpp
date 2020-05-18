@@ -13,9 +13,10 @@ void ViewMenu::display()
 {
 	clear();
 	View::display();
-	std::cout << "1. Filtrage" << std::endl << "2. Derivation" << std::endl << "3. Operations de morphologie mathematique" << std::endl << "4. Detection de contours" << std::endl << "5. Segmentation d'images" << std::endl;
+	std::cout << "1. Images" << std::endl << "2. Ajouter une Image" << std::endl << "3. Supprimer une image" << std::endl;
 	int a;
 	std::cin.clear();
 	std::cin >> a;
-	controller.setScreen(a);
+	if(a<=3)
+		controller.setScreen(a);
 }
