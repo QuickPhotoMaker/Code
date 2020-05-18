@@ -51,6 +51,18 @@
     <ClCompile Include="viewSegmentations.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="viewAdd.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="viewDelete.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="viewListe.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="viewFiltres.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h">
@@ -84,6 +96,18 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="viewSegmentations.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="viewAdd.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="viewDelete.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="viewListe.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="viewFiltres.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

@@ -16,7 +16,7 @@ ViewDetection::ViewDetection(Controller& _controller)
  */
 void ViewDetection::notify()
 {
-	if (controller.getCurrentScreen() == 4)
+	if (controller.getCurrentScreen() == 7)
 		display();
 }
 

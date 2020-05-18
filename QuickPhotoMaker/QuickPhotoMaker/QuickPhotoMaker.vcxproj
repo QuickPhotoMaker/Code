@@ -25,9 +25,13 @@
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
     <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewAdd.cpp" />
+    <ClCompile Include="viewDelete.cpp" />
     <ClCompile Include="viewDerivation.cpp" />
     <ClCompile Include="viewDetection.cpp" />
     <ClCompile Include="ViewFiltrage.cpp" />
+    <ClCompile Include="viewFiltres.cpp" />
+    <ClCompile Include="viewListe.cpp" />
     <ClCompile Include="viewMenu.cpp" />
     <ClCompile Include="viewOMM.cpp" />
     <ClCompile Include="viewSegmentations.cpp" />
@@ -38,9 +42,13 @@
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
     <ClInclude Include="view.h" />
+    <ClInclude Include="viewAdd.h" />
+    <ClInclude Include="viewDelete.h" />
     <ClInclude Include="viewDerivation.h" />
     <ClInclude Include="viewDetection.h" />
     <ClInclude Include="viewFiltrage.h" />
+    <ClInclude Include="viewFiltres.h" />
+    <ClInclude Include="viewListe.h" />
     <ClInclude Include="viewMenu.h" />
     <ClInclude Include="viewOMM.h" />
     <ClInclude Include="viewSegmentations.h" />
@@ -82,6 +90,8 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\metier\metier.vcxitems" Label="Shared" />
+    <Import Project="..\dao\dao.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />

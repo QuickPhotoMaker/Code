@@ -5,7 +5,17 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickPhotoMaker", "QuickPhotoMaker\QuickPhotoMaker.vcxproj", "{88FF3A96-4B24-4F8B-8DA9-BC1A3D0030C2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "model", "metier\metier.vcxitems", "{5C2324C5-AE79-4825-9AF5-45886986FFA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dao", "dao\dao.vcxitems", "{D6D64777-C253-4B54-9B0E-5F2CB3A4F4DE}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		metier\metier.vcxitems*{5c2324c5-ae79-4825-9af5-45886986ffa8}*SharedItemsImports = 9
+		dao\dao.vcxitems*{88ff3a96-4b24-4f8b-8da9-bc1a3d0030c2}*SharedItemsImports = 4
+		metier\metier.vcxitems*{88ff3a96-4b24-4f8b-8da9-bc1a3d0030c2}*SharedItemsImports = 4
+		dao\dao.vcxitems*{d6d64777-c253-4b54-9b0e-5f2cb3a4f4de}*SharedItemsImports = 9
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86

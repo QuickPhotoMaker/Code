@@ -16,7 +16,7 @@ ViewDerivation::ViewDerivation(Controller& _controller)
  */
 void ViewDerivation::notify()
 {
-	if (controller.getCurrentScreen() == 2)
+	if (controller.getCurrentScreen() == 5)
 		display();
 }
 
