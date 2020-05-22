@@ -24,4 +24,5 @@ public:
 	 */
 	virtual void display();
 
+	void derivation();
 };

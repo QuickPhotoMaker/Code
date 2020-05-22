@@ -42,6 +42,15 @@ void ViewListe::display()
 
 	if (res == 0)
 		controller.setScreen(res);
-	else
+	else {
+		std::ofstream file("image.txt");
+		if (!file.is_open())
+			throw "Erreur lors de l'ouverture du fichier";
+		file << controller.getImages()[res - 1].getPath();
+		file.close();
+		cv::Mat image = cv::imread(controller.getImages()[res-1].getPath());
+		cv::namedWindow(controller.getImages()[res - 1].getPath(), cv::WINDOW_NORMAL);
+		cv::imshow(controller.getImages()[res - 1].getPath(), image);
 		controller.setScreen(10);
+	}
 }

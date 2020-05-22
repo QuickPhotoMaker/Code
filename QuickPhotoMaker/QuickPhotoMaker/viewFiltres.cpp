@@ -16,6 +16,6 @@ void ViewFiltres::display()
 	std::cout << "1. Filtrage" << std::endl << "2. Derivation" << std::endl << "3. Operations de morphologie mathematique" << std::endl << "4. Detection de contours" << std::endl << "5. Segmentation d'images" << std::endl;	int a;
 	std::cin.clear();
 	std::cin >> a;
-	if(a>1)
+	if(a>=1)
 		controller.setScreen(a+3);
 }

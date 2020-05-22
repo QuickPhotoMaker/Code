@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include "observer.h"
+#include <fstream>
+#include <opencv2/opencv.hpp>
 
 class View: public Observer
 {

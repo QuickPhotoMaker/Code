@@ -40,5 +40,17 @@ void ViewFiltrage::display()
 		std::cout << "Saisissez la puissance" << std::endl;
 		int puissance;
 		std::cin >> puissance;
+		std::string selectedImage;
+		std::ifstream file("image.txt");
+		if (file.is_open()) {
+			while (!file.eof()) {
+				std::getline(file, selectedImage);
+			}
+		}
+		file.close();
+		std::cout << selectedImage;
+		cv::Mat image = cv::imread(selectedImage);
+		cv::namedWindow("FILTRAGE", cv::WINDOW_NORMAL);
+		cv::imshow(selectedImage, image);
 	}
 }

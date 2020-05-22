@@ -3,7 +3,11 @@
   <PropertyGroup Label="Globals">
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
+<<<<<<< Updated upstream
     <ItemsProjectGuid>{d6d64777-c253-4b54-9b0e-5f2cb3a4f4de}</ItemsProjectGuid>
+=======
+    <ItemsProjectGuid>{7dc4f50b-c6d5-42bd-82f9-b489dcf63ede}</ItemsProjectGuid>
+>>>>>>> Stashed changes
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -13,10 +17,13 @@
   <ItemGroup>
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
+<<<<<<< Updated upstream
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)daoImage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)daoImage.h" />
   </ItemGroup>
+=======
+>>>>>>> Stashed changes
 </Project>

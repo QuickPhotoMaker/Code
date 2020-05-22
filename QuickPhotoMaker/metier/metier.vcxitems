@@ -3,8 +3,7 @@
   <PropertyGroup Label="Globals">
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <ItemsProjectGuid>{5c2324c5-ae79-4825-9af5-45886986ffa8}</ItemsProjectGuid>
-    <ItemsProjectName>model</ItemsProjectName>
+    <ItemsProjectGuid>{5C2324C5-AE79-4825-9AF5-45886986FFA8}</ItemsProjectGuid>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
