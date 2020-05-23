@@ -35,7 +35,7 @@ void ViewFiltrage::display()
 	std::cin >> a;
 
 	if (a == 0)
-		controller.setScreen(a);
+		controller.setScreen(10);
 	else {
 		std::cout << "Saisissez la puissance" << std::endl;
 		int puissance;
