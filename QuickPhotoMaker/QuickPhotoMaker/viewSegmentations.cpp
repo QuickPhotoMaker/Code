@@ -34,7 +34,7 @@ void ViewSegmentations::display()
 	std::cin.clear();
 	std::cin >> a;
 	if (a == 0)
-		controller.setScreen(0);
+		controller.setScreen(10);
 	else {
 		std::cout << "Saisissez la puissance" << std::endl;
 		int puissance;

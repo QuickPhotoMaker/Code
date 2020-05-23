@@ -1,5 +1,6 @@
 #include "viewListe.h"
 #include <iostream>
+#include <fstream>
 
 /**
  * Constructor
@@ -42,6 +43,13 @@ void ViewListe::display()
 
 	if (res == 0)
 		controller.setScreen(res);
-	else
+	else {
+		std::ofstream file("selection.txt");
+		if (!file.is_open())
+			throw "Erreur lors de l'ouverture du fichier";
+		else
+			file << controller.getImages()[res - 1].getPath();
+		file.close();
 		controller.setScreen(10);
+	}
 }

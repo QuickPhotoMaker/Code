@@ -1,4 +1,5 @@
 #include "controller.h"
+#include <fstream>
 Controller::Controller()
 	:Subject(), currentScreen(0)
 {
@@ -17,7 +18,7 @@ int Controller::getCurrentScreen()
 	return currentScreen;
 }
 /**
- * Returns the collection of complaints
+ * Returns the collection of images
  */
 const Images& Controller::getImages()
 {
@@ -25,8 +26,8 @@ const Images& Controller::getImages()
 }
 
 /**
- * Add a  complaint to the collection
- * @param complaint: Complaint to add
+ * Add an image to the collection
+ * @param image: Image to add
  */
 void Controller::addImage(const Image& image)
 {
@@ -38,8 +39,8 @@ void Controller::addImage(const Image& image)
 }
 
 /**
- * Removes a complaint from the collection
- * @param index: Index of the complaint to remove
+ * Removes an image from the collection
+ * @param index: Index of the image to remove
  */
 void Controller::removeImage(const int& index)
 {

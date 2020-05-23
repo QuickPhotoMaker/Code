@@ -13,7 +13,7 @@ void ViewMenu::display()
 {
 	clear();
 	View::display();
-	std::cout << "1. Images" << std::endl << "2. Ajouter une Image" << std::endl << "3. Supprimer une image" << std::endl;
+	std::cout << "1. Images" << std::endl << "2. Ajouter une Image" << std::endl << "3. Supprimer une image" << std::endl << std::endl << "9. Fermer le programme" << std::endl;
 	int a;
 	std::cin.clear();
 	std::cin >> a;
