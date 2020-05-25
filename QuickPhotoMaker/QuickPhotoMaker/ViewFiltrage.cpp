@@ -67,11 +67,11 @@ void ViewFiltrage::display()
 
 		cv::Mat newimage; //on creer la nouvelle image (ici vide)
 		cv::medianBlur(image, newimage, valeur);//on applique le blur
-		cv::String nameWindow = "Filtrage median";
+		cv::String nameWindow = "Filtre median";
 		cv::namedWindow(nameWindow);
 		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
 		cv::waitKey(0);
-		cv::destroyAllWindows();
+		cv::destroyAllWindows;
 	}
 	else if (a==2) {
 		std::cout << "Saisissez la puissance" << std::endl;
@@ -108,4 +108,5 @@ void ViewFiltrage::display()
 		cv::waitKey(0);
 		cv::destroyAllWindows();
 	}
+	controller.setScreen(10);
 }

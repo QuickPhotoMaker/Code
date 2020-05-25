@@ -62,7 +62,7 @@ void ViewSegmentations::display()
 		cv::Mat newimage; //on creer la nouvelle image (ici vide)
 		cv::cvtColor(image, image, cv::COLOR_BGR2GRAY);//on mets l'image en noir et blanc
 		cv::threshold(image, newimage, value, 255, type);
-		cv::String nameWindow = "Threshold";
+		cv::String nameWindow = "Operations de seuillage";
 		cv::namedWindow(nameWindow);
 		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
 		cv::waitKey(0);
@@ -148,10 +148,11 @@ void ViewSegmentations::display()
                 }
             }
         }
-        cv::String nameWindow = "Segmentationvoila";
+        cv::String nameWindow = "Segmentation par croissance de region";
         cv::namedWindow(nameWindow);
         cv::imshow(nameWindow, dst);//on affiche l'image modifiée
         cv::waitKey(0);
         cv::destroyAllWindows();
 	}
+    controller.setScreen(10);
 }

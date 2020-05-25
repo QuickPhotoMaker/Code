@@ -58,7 +58,7 @@ void ViewOMM::display()
 		cv::Mat newimage; //on creer la nouvelle image (ici vide)
 		cv::Mat element = cv::Mat();
 		cv::dilate(image, newimage, element);
-		cv::String nameWindow = "Dilation";
+		cv::String nameWindow = "Dilatation";
 		cv::namedWindow(nameWindow);
 		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
 		cv::waitKey(0);
@@ -84,10 +84,11 @@ void ViewOMM::display()
 		cv::Mat newimage; //on creer la nouvelle image (ici vide)
 		cv::Mat element = cv::Mat();
 		cv::erode(image, newimage, element);
-		cv::String nameWindow = "Errosion";
+		cv::String nameWindow = "Erosion";
 		cv::namedWindow(nameWindow);
 		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
 		cv::waitKey(0);
 		cv::destroyAllWindows();
 	}
+	controller.setScreen(10);
 }
