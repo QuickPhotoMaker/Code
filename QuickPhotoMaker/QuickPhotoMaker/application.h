@@ -9,6 +9,7 @@
 #include "viewDelete.h"
 #include "viewListe.h"
 #include "viewFiltres.h"
+#include "viewSegmentations.h"
 class Application
 {
 private:
@@ -22,6 +23,7 @@ private:
 	ViewDelete viewDelete;
 	ViewListe viewListe;
 	ViewFiltres viewFiltres;
+	ViewSegmentations viewSegmentations;
 
 public:
 	/**
