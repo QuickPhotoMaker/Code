@@ -1,6 +1,7 @@
 #include "viewAdd.h"
 #include <iostream>
-
+#include <opencv2/opencv.hpp>
+#include <Windows.h>
 /**
  * Constructor
  * @param _controller: Application controller
@@ -11,18 +12,14 @@ ViewAdd::ViewAdd(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewAdd::notify()
 {
 	if (controller.getCurrentScreen() == 2)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewAdd::display()
 {
 	clear();
@@ -40,8 +37,15 @@ void ViewAdd::display()
 		controller.setScreen(0);
 	else
 	{
-		Image image(path);
-
-		controller.addImage(image);
+		cv::Mat test = cv::imread(path);
+		if (!test.empty()) {
+			Image image(path);
+			controller.addImage(image);
+		}
+		else {
+			std::cout << "Erreur : image inexistante" << std::endl;
+			Sleep(2000);
+		}
+		controller.setScreen(0);
 	}
 }

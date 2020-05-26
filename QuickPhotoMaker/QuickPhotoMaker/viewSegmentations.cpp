@@ -12,18 +12,14 @@ ViewSegmentations::ViewSegmentations(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewSegmentations::notify()
 {
 	if (controller.getCurrentScreen() == 8)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewSegmentations::display()
 {
 	clear();
@@ -36,7 +32,9 @@ void ViewSegmentations::display()
 	std::cin >> a;
 	if (a == 0)
 		controller.setScreen(10);
-	else if (a==1) //seuillage
+
+    //Operations the seuillages
+	else if (a==1) 
 	{
 		std::cout << "Saisissez la puissance" << std::endl;
 		int value;
@@ -53,21 +51,23 @@ void ViewSegmentations::display()
 		}
 		file.close();
 		cv::Mat image = cv::imread(selectedImage);
-		if (image.empty())//on verifie que l'imaeg n'est pas vide
+		if (image.empty())
 		{
 			std::cout << "Could not open or find the image" << std::endl;
 			std::cin.get();
 		}
 
-		cv::Mat newimage; //on creer la nouvelle image (ici vide)
-		cv::cvtColor(image, image, cv::COLOR_BGR2GRAY);//on mets l'image en noir et blanc
+		cv::Mat newimage;
+		cv::cvtColor(image, image, cv::COLOR_BGR2GRAY);
 		cv::threshold(image, newimage, value, 255, type);
 		cv::String nameWindow = "Operations de seuillage";
 		cv::namedWindow(nameWindow);
-		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
+		cv::imshow(nameWindow, newimage);
 		cv::waitKey(0);
 		cv::destroyAllWindows();
 	}
+
+    //Segmentation par croissance de region
 	else if (a == 2)
 	{
         std::string selectedImage;
@@ -79,7 +79,7 @@ void ViewSegmentations::display()
         }
         file.close();
         cv::Mat image = cv::imread(selectedImage);
-        if (image.empty())//on verifie que l'imaeg n'est pas vide
+        if (image.empty())
         {
             std::cout << "Could not open or find the image" << std::endl;
             std::cin.get();
@@ -150,7 +150,7 @@ void ViewSegmentations::display()
         }
         cv::String nameWindow = "Segmentation par croissance de region";
         cv::namedWindow(nameWindow);
-        cv::imshow(nameWindow, dst);//on affiche l'image modifiée
+        cv::imshow(nameWindow, dst);
         cv::waitKey(0);
         cv::destroyAllWindows();
 	}

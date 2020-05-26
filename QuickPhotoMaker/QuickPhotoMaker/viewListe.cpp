@@ -12,18 +12,14 @@ ViewListe::ViewListe(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewListe::notify()
 {
 	if (controller.getCurrentScreen() == 1)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewListe::display()
 {
 	clear();

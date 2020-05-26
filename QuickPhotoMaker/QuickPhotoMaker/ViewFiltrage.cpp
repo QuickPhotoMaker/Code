@@ -12,18 +12,14 @@ ViewFiltrage::ViewFiltrage(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewFiltrage::notify()
 {
 	if (controller.getCurrentScreen() == 4)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewFiltrage::display()
 {
 	clear();
@@ -37,6 +33,8 @@ void ViewFiltrage::display()
 
 	if (a == 0)
 		controller.setScreen(10);
+
+	//Filtre median
 	else if (a == 1)
 	{
 		std::cout << "Saisissez la puissance" << std::endl;
@@ -59,20 +57,22 @@ void ViewFiltrage::display()
 		}
 		file.close();
 		cv::Mat image = cv::imread(selectedImage);
-		if (image.empty())//on verifie que l'imaeg n'est pas vide
+		if (image.empty())
 		{
 			std::cout << "Could not open or find the image" << std::endl;
 			std::cin.get();
 		}
 
-		cv::Mat newimage; //on creer la nouvelle image (ici vide)
-		cv::medianBlur(image, newimage, valeur);//on applique le blur
+		cv::Mat newimage;
+		cv::medianBlur(image, newimage, valeur);
 		cv::String nameWindow = "Filtre median";
 		cv::namedWindow(nameWindow);
-		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
+		cv::imshow(nameWindow, newimage);
 		cv::waitKey(0);
 		cv::destroyAllWindows;
 	}
+
+	//Filtre gaussien
 	else if (a==2) {
 		std::cout << "Saisissez la puissance" << std::endl;
 		int valeur;
@@ -94,17 +94,17 @@ void ViewFiltrage::display()
 		}
 		file.close();
 		cv::Mat image = cv::imread(selectedImage);
-		if (image.empty())//on verifie que l'imaeg n'est pas vide
+		if (image.empty())
 		{
 			std::cout << "Could not open or find the image" << std::endl;
 			std::cin.get();
 		}
 
-		cv::Mat newimage; //on creer la nouvelle image (ici vide)
-		cv::GaussianBlur(image, newimage, cv::Size(valeur, valeur), 0, 0, cv::BORDER_DEFAULT);//on applique le blur
+		cv::Mat newimage;
+		cv::GaussianBlur(image, newimage, cv::Size(valeur, valeur), 0, 0, cv::BORDER_DEFAULT);
 		cv::String nameWindow = "Filtre gaussien";
 		cv::namedWindow(nameWindow);
-		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
+		cv::imshow(nameWindow, newimage);
 		cv::waitKey(0);
 		cv::destroyAllWindows();
 	}

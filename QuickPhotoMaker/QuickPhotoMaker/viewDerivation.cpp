@@ -14,18 +14,14 @@ ViewDerivation::ViewDerivation(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewDerivation::notify()
 {
 	if (controller.getCurrentScreen() == 5)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewDerivation::display()
 {
 	clear();
@@ -40,8 +36,6 @@ void ViewDerivation::display()
 	}
 	file.close();
 	cv::Mat src = cv::imread(selectedImage);
-	cv::namedWindow(selectedImage);
-	cv::imshow(selectedImage, src);
 	cv::GaussianBlur(src, src, cv::Size(3, 3), 0, 0, cv::BORDER_DEFAULT);
 	cv::cvtColor(src, src, cv::COLOR_BGR2GRAY);
 	cv::Mat grad_x, grad_y;
