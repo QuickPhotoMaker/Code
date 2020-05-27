@@ -44,6 +44,7 @@ void ViewFiltres::display()
 			cv::namedWindow(selection);
 			cv::imshow(selection, image);
 			cv::waitKey(0);
+			controller.setScreen(10);
 		}
 		else
 			controller.setScreen(a + 3);

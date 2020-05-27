@@ -42,10 +42,10 @@ void ViewDelete::display()
 			controller.removeImage(res - 1);
 		std::ofstream file("paths.txt");
 		for (int iImage = 0; iImage < controller.getImages().size(); ++iImage) {
-			if (iImage != controller.getImages().size() - 1)
+			if (iImage != controller.getImages().size() - 2)
 				file << controller.getImages()[iImage].getPath() << '\n';
 			else
-				file << controller.getImages()[iImage].getPath();
+				file << controller.getImages()[iImage].getPath() << std::flush;
 		}
 		file.close();
 	}

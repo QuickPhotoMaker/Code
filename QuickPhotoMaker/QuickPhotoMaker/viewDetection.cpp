@@ -1,7 +1,7 @@
 #include "viewDetection.h"
 #include <iostream>
 #include <fstream>
-
+//I know that you don't like global variables, but we wanted to try the trackbar. In the other classes there aren't global variables.
 int lowThreshold = 0;
 cv::Mat src, src_gray, dst, detected_edges;
 /**
@@ -21,7 +21,7 @@ void ViewDetection::notify()
 		display();
 }
 
-//Displays the view
+//Canny function
 static void CannyThreshold(int,void*)
 {
 	cv::blur(src_gray, detected_edges, cv::Size(3, 3));
@@ -30,6 +30,7 @@ static void CannyThreshold(int,void*)
 	src.copyTo(dst, detected_edges);
 	cv::imshow("Detection de contours", dst);
 }
+//Displays the view
 void ViewDetection::display()
 {
 	clear();

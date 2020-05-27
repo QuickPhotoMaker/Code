@@ -27,4 +27,6 @@ void ViewMenu::display()
 	std::cin >> a;
 	if (a <= 3)
 		controller.setScreen(a);
+	else if (a == 9)
+		exit(0);
 }

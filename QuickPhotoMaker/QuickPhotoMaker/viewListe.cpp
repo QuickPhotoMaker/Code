@@ -25,9 +25,10 @@ void ViewListe::display()
 	clear();
 	View::display();
 
-	for (int iComplaint = 0; iComplaint < controller.getImages().size(); ++iComplaint)
+	for (int iImage = 0; iImage < controller.getImages().size(); ++iImage)
 	{
-		std::cout << (iComplaint + 1) << ". " << controller.getImages()[iComplaint].getPath() << std::endl;
+		if(controller.getImages()[iImage].getPath()!="")
+			std::cout << (iImage + 1) << ". " << controller.getImages()[iImage].getPath() << std::endl;
 	}
 
 	std::cout << "------------------------------------------------------------" << std::endl;
