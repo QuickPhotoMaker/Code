@@ -14,18 +14,14 @@ ViewDetection::ViewDetection(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewDetection::notify()
 {
 	if (controller.getCurrentScreen() == 7)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 static void CannyThreshold(int,void*)
 {
 	cv::blur(src_gray, detected_edges, cv::Size(3, 3));
@@ -49,8 +45,6 @@ void ViewDetection::display()
 	}
 	file.close();
 	src = cv::imread(selectedImage);
-	cv::namedWindow(selectedImage);
-	cv::imshow(selectedImage, src);
 	dst.create(src.size(), src.type());
 	cv::cvtColor(src, src_gray, cv::COLOR_BGR2GRAY);
 	cv::namedWindow("Detection de contours", cv::WINDOW_AUTOSIZE);

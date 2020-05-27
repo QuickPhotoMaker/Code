@@ -14,13 +14,9 @@ public:
 	 */
 	View(const std::string& _title);
 
-	/**
-	 * Clears console
-	 */
+	//Clears console
 	void clear() const;
 
-	/**
-	 * Displays generic dialog
-	 */
+	//Displays generic dialog
 	virtual void display() const;
 };

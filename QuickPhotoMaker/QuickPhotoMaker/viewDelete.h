@@ -6,6 +6,7 @@
 class ViewDelete:public View
 {
 private:
+	//Controller of the application
 	Controller& controller;
 public:
 	/**
@@ -14,13 +15,9 @@ public:
 	 */
 	ViewDelete(Controller& _controller);
 
-	/**
-	 * Notification function of the view
-	 */
+	//Notification function of the view
 	virtual void notify();
 
-	/**
-	 * Displays the view
-	 */
+	//Displays the view
 	virtual void display();
 };

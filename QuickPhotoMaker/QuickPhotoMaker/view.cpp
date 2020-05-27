@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 
-/**
+/*
  * Constructor
  * @param _title: Title of the view
  */
@@ -10,17 +10,13 @@ View::View(const std::string& _title)
     :title(_title)
 {}
 
-/**
- * Clears console
- */
+//Clears the console
 void View::clear() const
 {
     system("CLS");
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void View::display() const
 {
     std::cout << title << std::endl << std::endl;

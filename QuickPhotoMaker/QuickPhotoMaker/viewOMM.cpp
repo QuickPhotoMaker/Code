@@ -12,18 +12,14 @@ ViewOMM::ViewOMM(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewOMM::notify()
 {
 	if (controller.getCurrentScreen() == 6)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewOMM::display()
 {
 	clear();
@@ -38,7 +34,8 @@ void ViewOMM::display()
 	if (a == 0)
 		controller.setScreen(10);
 
-	else if (a==1) //dillatation
+	//Dilatation
+	else if (a==1)
 	{
 		std::string selectedImage;
 		std::ifstream file("selection.txt");
@@ -49,22 +46,24 @@ void ViewOMM::display()
 		}
 		file.close();
 		cv::Mat image = cv::imread(selectedImage);
-		if (image.empty())//on verifie que l'imaeg n'est pas vide
+		if (image.empty())
 		{
 			std::cout << "Could not open or find the image" << std::endl;
 			std::cin.get();
 		}
 
-		cv::Mat newimage; //on creer la nouvelle image (ici vide)
+		cv::Mat newimage;
 		cv::Mat element = cv::Mat();
 		cv::dilate(image, newimage, element);
 		cv::String nameWindow = "Dilatation";
 		cv::namedWindow(nameWindow);
-		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
+		cv::imshow(nameWindow, newimage);
 		cv::waitKey(0);
 		cv::destroyAllWindows();
 	}
-	else if (a == 2)//errosion
+
+	//Erosion
+	else if (a == 2)
 	{
 		std::string selectedImage;
 		std::ifstream file("selection.txt");
@@ -75,18 +74,18 @@ void ViewOMM::display()
 		}
 		file.close();
 		cv::Mat image = cv::imread(selectedImage);
-		if (image.empty())//on verifie que l'imaeg n'est pas vide
+		if (image.empty())
 		{
 			std::cout << "Could not open or find the image" << std::endl;
 			std::cin.get();
 		}
 
-		cv::Mat newimage; //on creer la nouvelle image (ici vide)
+		cv::Mat newimage;
 		cv::Mat element = cv::Mat();
 		cv::erode(image, newimage, element);
 		cv::String nameWindow = "Erosion";
 		cv::namedWindow(nameWindow);
-		cv::imshow(nameWindow, newimage);//on affiche l'image modifiée
+		cv::imshow(nameWindow, newimage);
 		cv::waitKey(0);
 		cv::destroyAllWindows();
 	}

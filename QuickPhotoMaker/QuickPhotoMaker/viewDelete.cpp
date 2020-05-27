@@ -11,25 +11,20 @@ ViewDelete::ViewDelete(Controller& _controller)
 	controller.addObserver(this);
 }
 
-/**
- * Notification function of the view
- */
+//Notification function of the view
 void ViewDelete::notify()
 {
 	if (controller.getCurrentScreen() == 3)
 		display();
 }
 
-/**
- * Displays the view
- */
+//Displays the view
 void ViewDelete::display()
 {
 	clear();
 	View::display();
 	for (int iImage = 0; iImage < controller.getImages().size(); ++iImage)
 	{
-		//TODO
 		std::cout << (iImage + 1) << ". " << controller.getImages()[iImage].getPath() << std::endl;
 	}
 
@@ -43,7 +38,8 @@ void ViewDelete::display()
 	if (res == 0)
 		controller.setScreen(res);
 	else {
-		controller.removeImage(res - 1);
+		if(res <= controller.getImages().size())
+			controller.removeImage(res - 1);
 		std::ofstream file("paths.txt");
 		for (int iImage = 0; iImage < controller.getImages().size(); ++iImage) {
 			if (iImage != controller.getImages().size() - 1)

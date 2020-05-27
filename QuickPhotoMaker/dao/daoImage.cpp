@@ -1,4 +1,6 @@
 #include "daoImage.h"
+
+//saves the image path
 void DAOImage::save(const Image& image)
 {
 	std::ofstream file("paths.txt", std::ios::app);
@@ -7,6 +9,8 @@ void DAOImage::save(const Image& image)
 	file << image.getPath() << '\n';
 	file.close();
 }
+
+//loads the image path
 void DAOImage::load(Images& images)
 {
 	std::ifstream file("paths.txt");
