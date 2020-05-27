@@ -1,1 +1,23 @@
-﻿  QuickPhotoMaker.vcxproj -> C:\Users\Pierre\Desktop\Code\QuickPhotoMaker\x64\Debug\QuickPhotoMaker.exe
+﻿  Application.cpp
+  controller.cpp
+  main.cpp
+  observer.cpp
+  subject.cpp
+  view.cpp
+  viewAdd.cpp
+  viewDelete.cpp
+  viewDerivation.cpp
+  viewDetection.cpp
+  ViewFiltrage.cpp
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\QuickPhotoMaker\ViewFiltrage.cpp(72,7): warning C4551: chiamata di funzione senza elenco di argomenti
+  viewFiltres.cpp
+  viewListe.cpp
+  viewMenu.cpp
+  viewOMM.cpp
+  viewSegmentations.cpp
+  image.cpp
+  images.cpp
+C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\metier\images.cpp(23,22): warning C4267: 'return': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+  daoImage.cpp
+  Generazione del codice in corso...
+  QuickPhotoMaker.vcxproj -> C:\Users\Federico Di Spirito\Desktop\Code\QuickPhotoMaker\x64\Debug\QuickPhotoMaker.exe
