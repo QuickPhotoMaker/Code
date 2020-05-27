@@ -39,7 +39,7 @@ void ViewListe::display()
 
 	if (res == 0)
 		controller.setScreen(res);
-	else {
+	else if (res <= controller.getImages().size()) {
 		std::ofstream file("selection.txt");
 		if (!file.is_open())
 			throw "Erreur lors de l'ouverture du fichier";
@@ -48,4 +48,5 @@ void ViewListe::display()
 		file.close();
 		controller.setScreen(10);
 	}
+	controller.setScreen(0);
 }

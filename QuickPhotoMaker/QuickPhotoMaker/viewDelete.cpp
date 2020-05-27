@@ -38,7 +38,7 @@ void ViewDelete::display()
 	if (res == 0)
 		controller.setScreen(res);
 	else {
-		if(res <= controller.getImages().size())
+		if (res <= controller.getImages().size())
 			controller.removeImage(res - 1);
 		std::ofstream file("paths.txt");
 		for (int iImage = 0; iImage < controller.getImages().size(); ++iImage) {
