@@ -23,9 +23,9 @@ void ViewDelete::display()
 {
 	clear();
 	View::display();
-	for (int iImage = 0; iImage < controller.getImages().size(); ++iImage)
+	for (int iImage = 1; iImage < controller.getImages().size(); ++iImage)
 	{
-		std::cout << (iImage + 1) << ". " << controller.getImages()[iImage].getPath() << std::endl;
+		std::cout << (iImage) << ". " << controller.getImages()[iImage].getPath() << std::endl;
 	}
 
 	std::cout << "------------------------------------------------------------" << std::endl;
@@ -37,16 +37,6 @@ void ViewDelete::display()
 
 	if (res == 0)
 		controller.setScreen(res);
-	else {
-		if (res <= controller.getImages().size())
-			controller.removeImage(res - 1);
-		std::ofstream file("paths.txt");
-		for (int iImage = 0; iImage < controller.getImages().size(); ++iImage) {
-			if (iImage != controller.getImages().size() - 2)
-				file << controller.getImages()[iImage].getPath() << '\n';
-			else
-				file << controller.getImages()[iImage].getPath() << std::flush;
-		}
-		file.close();
-	}
+	else if (res < controller.getImages().size())
+		controller.removeImage(res);
 }

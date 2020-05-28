@@ -6,7 +6,7 @@ void DAOImage::save(const Image& image)
 	std::ofstream file("paths.txt", std::ios::app);
 	if (!file.is_open())
 		throw "Erreur lors de l'ouverture du fichier";
-	file << image.getPath() << '\n';
+	file << '\n' << image.getPath();
 	file.close();
 }
 

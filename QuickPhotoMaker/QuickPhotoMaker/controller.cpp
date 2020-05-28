@@ -42,10 +42,10 @@ const Images& Controller::getImages()
  */
 void Controller::addImage(const Image& image)
 {
-	images.add(image);
-
-	daoImage.save(image);
-
+	if (image.getPath() != "") {
+		images.add(image);
+		daoImage.save(image);
+	}
 	setScreen(0);
 }
 
@@ -56,5 +56,10 @@ void Controller::addImage(const Image& image)
 void Controller::removeImage(const int& index)
 {
 	images.remove(index);
+	std::ofstream file("paths.txt");
+	for (int iImage = 1; iImage < getImages().size(); ++iImage) {
+		file << '\n' << getImages()[iImage].getPath();
+	}
+	file.close();
 	notify();
 }

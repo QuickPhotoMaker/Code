@@ -25,10 +25,9 @@ void ViewListe::display()
 	clear();
 	View::display();
 
-	for (int iImage = 0; iImage < controller.getImages().size(); ++iImage)
+	for (int iImage = 1; iImage < controller.getImages().size(); ++iImage)
 	{
-		if(controller.getImages()[iImage].getPath()!="")
-			std::cout << (iImage + 1) << ". " << controller.getImages()[iImage].getPath() << std::endl;
+		std::cout << (iImage) << ". " << controller.getImages()[iImage].getPath() << std::endl;
 	}
 
 	std::cout << "------------------------------------------------------------" << std::endl;
@@ -40,12 +39,12 @@ void ViewListe::display()
 
 	if (res == 0)
 		controller.setScreen(res);
-	else if (res <= controller.getImages().size()) {
+	else if (res < controller.getImages().size()) {
 		std::ofstream file("selection.txt");
 		if (!file.is_open())
 			throw "Erreur lors de l'ouverture du fichier";
 		else
-			file << controller.getImages()[res - 1].getPath();
+			file << controller.getImages()[res].getPath();
 		file.close();
 		controller.setScreen(10);
 	}
